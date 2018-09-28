@@ -1,0 +1,33 @@
+<!--头像 昵称-->
+
+<view>
+
+  <body class="all_back">
+    <image class="all_pic" src="/assets/images/backpic.png"></image>
+  </body>
+
+  <view class="my_pic">
+    <view class="user_box" wx:if="{{userid}}">
+      <!-- <image class="user_pic" src="/assets/images/person.jpeg" ></image> -->
+      <open-data class="user_pic" type="userAvatarUrl"></open-data>
+      <open-data type="userNickName" class="user_name"></open-data>
+    </view>
+     <view wx:else class="loginbott">
+      <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="doLogin">登录</button>
+    </view> 
+  </view>
+
+</view>
+
+
+
+<!--评论 发布 消息 -->
+<!--<view class='mylist_line'></view>-->
+<view class="mylist_all">
+  <view class="mylist_box" wx:for="{{mylist}}" wx:key="{{mylist}}">
+    <navigator url="{{item.url}}">
+      <image src="{{item.pic}}" class="mylist_pic"></image>
+      <view class="mylist_text">{{item.name}}</view>
+    </navigator>
+  </view>
+</view>

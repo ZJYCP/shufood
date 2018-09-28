@@ -1,0 +1,18 @@
+
+<view class="container">
+  <view class="userinfo">
+
+          <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+      <open-data type="userNickName" class="userinfo-nickname"></open-data>
+  </view>
+
+  <view class="dishshow">
+    <view style="padding: 15px;">{{dish}}</view>
+  </view>
+
+  <view class="panel">
+    <view class="btns">
+      <button class="btn" bindtap='bindClickTap'>{{btnText}}</button>
+    </view>
+  </view>
+</view>

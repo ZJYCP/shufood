@@ -1,0 +1,16 @@
+<import src="../../components/filterbar/filterbar.wxml" />
+<import src="../template/dishlist_temp.wxml" />
+<view class="page" style="{{ pageStyle }}">
+  <view class="page__bd" >
+
+      <template is="filterbar" data="{{ ...$wux.filterbar }}" />
+
+
+    <view class="foodlist">
+      <block wx:for="{{dishlist}}" wx:key="">
+        <template is="dishlist" data="{{...item}}" />
+      </block>
+    </view>
+
+  </view>
+</view>

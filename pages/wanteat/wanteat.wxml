@@ -1,0 +1,13 @@
+<import src="../template/dishlist_temp.wxml" />
+
+<view class="wanteat_all" wx:if="{{none}}">
+  <image src="/assets/images/wanteat.png"></image>
+</view>
+
+<scroll-view wx:else scroll-y="true" class="scrollfood"  scroll-top="200rpx">
+  <view class="foodlist">
+    <block wx:for="{{dishlist}}" wx:key="{{dishlist.dishId}}">
+      <template is="dishlist" data="{{...item}}" />
+    </block>
+  </view>
+</scroll-view>

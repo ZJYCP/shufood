@@ -1,0 +1,19 @@
+<import src="../../components/rater/rater.wxml" />
+
+ <view class="page__hd page__title">食堂评价</view>
+<view class="weui-cells weui-cells_after-title">
+    <block wx:for="{{ items }}" wx:key="">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">{{ item.text }}</view>
+            <view class="weui-cell__ft">
+                <template is="rater" data="{{ ...$wux.rater[item.id] }}" />
+            </view>
+        </view>
+    </block>
+</view>
+<view class="section">
+  <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="其他意见建议" name="textarea"/>
+    <button form-type="submit"> 提交 </button>
+  </form>
+</view>
