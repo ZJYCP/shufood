@@ -1,0 +1,82 @@
+<import src="../template/dishlist_temp.wxml" />
+<!-- 搜索框 -->
+<view class="Search_all">
+  <view class="input_box">
+    <icon class="search_icon" type="search" size="12" color="#999" />
+    <input class="input_text" disabled="true" type="text" placeholder="搜一搜" bindtap="click_search" />
+  </view>
+</view>
+
+<!-- 菜品 -->
+<view class="cuisine_all">
+  <scroll-view class="cuisine_box" scroll-x="true">
+
+    <view class="item_list" wx:for="{{list}}" wx:key="{{list}}">
+      <navigator url="{{item.url}}">
+        <image src="{{item.pic}}" class="item_pic"></image>
+        <view class="item_text">{{item.name}}</view>
+      </navigator>
+    </view>
+
+  </scroll-view>
+</view>
+
+<!-- 今天吃啥 -->
+
+<view class="whattoeat_all">
+  <image class="whattoeat_box" src="/assets/images/chisha.png" bindtap="click_whattoeat" hover-class="none"></image>
+</view>
+
+
+
+<view class="every_title">
+  <text class="every_text">推荐食堂</text>
+</view>
+
+<!-- 食堂 -->
+<view class="canteen_all">
+
+  <view class="yixin_box">
+    <navigator url="/pages/canteen1/canteen1?canteen=益新">
+      <image src="/assets/images/yixin.png" class="canteen_pic"></image>
+    </navigator>
+  </view>
+
+  <view class="ermei_box">
+    <navigator url="/pages/canteen1/canteen1?canteen=尔美">
+      <image src="/assets/images/ermei.png" class="canteen_pic"></image>
+    </navigator>
+  </view>
+
+  <view class="shuixiu_box">
+    <navigator url="/pages/canteen1/canteen1?canteen=山明">
+      <image src="/assets/images/shanming.png" class="canteen_pic"></image>
+    </navigator>
+  </view>
+
+  <view class="shanming_box">
+    <navigator url="/pages/canteen1/canteen1?canteen=水秀">
+      <image src="/assets/images/shuixiu.png" class="canteen_pic"></image>
+    </navigator>
+  </view>
+
+</view>
+
+<!-- 热品推荐 -->
+
+<view class="every_title">
+  <text class="every_text">热品推荐</text>
+</view>
+
+<view class="foodlist">
+  <view class="" wx:for="{{dishlist}}" wx:key="{{dishId}}">
+    <template is="dishlist" data="{{...item}}" />
+  </view>
+</view>
+
+<view class="am-bottom">
+  <!-- <view class="line" ></view>  -->
+
+  <view class="bottomtitle">别滑了，我是有底线的</view>
+  <!-- <view></view> -->
+</view>

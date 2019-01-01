@@ -1,0 +1,93 @@
+.scrollfood {
+  scroll-into-view: 5;
+  scroll-top: 200rpx;
+}
+
+.foodlist {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx 0rpx;
+}
+
+.food_item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.food_image {
+  float: left;
+  margin: 20rpx 40rpx 20rpx;
+  width: 230rpx;
+  height: 172rpx;
+}
+
+.food_info {
+   /* float: right;  */
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx 30rpx 20rpx;
+}
+
+.uppart {
+  display: flex;
+}
+
+.foodname {
+  width: 285rpx;
+  font-size: 28rpx;
+  color: #73727a;
+  font-weight: bold;
+}
+
+.food_canteen_box{
+  background: #80c26a;
+  border-radius: 10rpx;
+  height: 50rpx;
+}
+
+.food_canteen {
+  color: white;
+  font-size: 24rpx;
+  margin: 5rpx 8rpx 8rpx 8rpx;
+
+  border-radius: 20rpx;
+
+  height: 50rpx; 
+  width: 104rpx;
+  line-height: 50rpx;
+  text-align:center;
+
+}
+
+.stars {
+  display: flex;
+  margin: 20rpx 0 0 ;
+}
+
+.star {
+  width: 25rpx;
+  height: 25rpx;
+  margin: 0 5rpx 0 0;
+}
+
+.downpart {
+  display: flex;
+  margin: 25rpx 0 0;
+}
+
+.foodprice {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #ffa72b;
+  width: 310rpx;
+  margin-left: 5rpx;
+}
+
+.like {
+  font-size: 26rpx;
+  color: #ffa078;
+}

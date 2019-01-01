@@ -1,0 +1,37 @@
+<import src="../template/dishlist_temp.wxml"/>
+<!--主盒子-->
+<view class="container">
+
+  <!--楼层栏-->
+  <view class="nav_stairs">
+    <block wx:for="{{stairs}}">
+      <view class="{{curIndex == item.index ? 'active' : 'nav_stairs_items'}}" bindtap='stairTab' data-index="{{item.index}}" >
+      {{item.floor}}</view>
+    </block>
+  </view>
+
+
+  <!--窗口栏-->
+  <!-- <scroll-view scroll-x="true"  class="scrollwindow">
+  <view class="nav_window">
+  
+      <block wx:for="{{stairs[curIndex].children}}">
+        <view class="{{curWindow == item.winid ? 'activeWindow' : 'nav_window_items'}}" 
+        bindtap='windowTab'  data-index="{{item.winid}}"> {{item.name}} </view>
+      </block>
+
+  </view>
+  </scroll-view> -->
+
+
+
+   <!--菜单列表-->
+  <scroll-view scroll-y="true" class="scrollfood" scroll-into-view="1" scroll-top="200rpx">
+    <view class="foodlist">
+      <block wx:for="{{dishlist}}">
+      <template is="dishlist" data="{{...item}}"/>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+

@@ -1,0 +1,51 @@
+{
+  "pages": [
+
+    "pages/index/index",
+    "pages/details/details",
+    "pages/search/search",
+    "pages/canteen1/canteen1",
+    "pages/square/square",
+    "pages/jkfood/jkfood",
+    "pages/person/person",
+    "pages/wanteat/wanteat",
+    "pages/comment_history/comment_history",
+    "pages/comment/comment",
+    "pages/article1/article1",
+    "pages/what_to/what_to",
+    "pages/button/index"
+
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fcf185",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#9BABBA",
+    "selectedColor": "#495056",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/images/index1.png",
+        "selectedIconPath": "assets/images/index2.png"
+      },
+      {
+        "pagePath": "pages/square/square",
+        "text": "发现",
+        "iconPath": "assets/images/square1.png",
+        "selectedIconPath": "assets/images/square2.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人",
+        "iconPath": "assets/images/person1.png",
+        "selectedIconPath": "assets/images/person2.png"
+      }
+    ]
+  }
+}

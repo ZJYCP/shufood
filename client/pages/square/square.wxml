@@ -1,0 +1,41 @@
+ 
+ <!--两个说-->
+  <view class="two">
+    <block wx:for="{{two}}" wx:key="{{two}}">
+      <view class="{{cur == item.index ? 'active' : 'saying'}}" bindtap='Tab' data-index="{{item.index}}" > {{item.name}}</view>
+    </block>
+  </view>
+
+
+   <!--吃货咨询-->
+   <view wx:if="{{cur}}">
+          <scroll-view scroll-y="true" class="scrollfood"  scroll-top="200rpx"> 
+            <view class="info_container">
+               <view wx:for="{{eat_info}}" wx:key="{{eat_info}}">
+  
+                  <view class="info_item">
+                      <navigator url="../article1/article1?uid={{item.uid}}">
+                          <image class="poster" src="{{item.img}}" ></image>
+                           <view class="title">{{item.title}}</view>
+                      </navigator>
+                  </view>
+                </view>
+              </view>
+           </scroll-view>
+  </view>
+
+<!--食堂资讯-->
+<view wx:else>
+ <scroll-view scroll-y="true" class="scrollfood" scroll-top="200rpx"> 
+   <view class="info_container">
+    <view wx:for="{{can_info}}" wx:key="{{can_info}}">
+    <view class="info_item">
+      <navigator url="../article1/article1?uid={{item.uid}}">
+       <image class="poster" src="{{item.img}}" ></image>
+       <view class="title">{{item.title}}</view>
+      </navigator>
+    </view>
+   </view>
+  </view>
+</scroll-view>
+</view>

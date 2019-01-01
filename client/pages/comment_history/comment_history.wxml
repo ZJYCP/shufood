@@ -1,0 +1,22 @@
+<view class="commentall" wx:if="{{none}}">
+  <image src="/assets/images/commentall.png"></image>
+</view>
+<view  wx:for="{{dishlist}}" >
+  <view class="food_item">
+    <navigator url="../details/details?id={{item[0].dishId}}">
+      <image class="food_image" src="{{'https://food.shuguide.org/uploads/'+item[0].dishImg}}"></image>
+      <view class="food_info">
+
+        <view class="uppart">
+          <view class="foodname">{{item[0].dishName}}</view>
+          <view class='food_canteen_box'>
+            <text class="food_canteen">{{item[0].dishPlace}}{{item[0].dishFloor==1?'一楼  ':item[0].dishFloor==2?'二楼':'三楼'}}</text>
+          </view>
+        </view>
+        <view class="downpart">
+          <text class="comment">{{item[1].comment}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>
