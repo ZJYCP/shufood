@@ -1,5 +1,0 @@
-@import "../template/dishlist_temp.wxss";
-
-.wanteat_all{
-text-align: center;
-}

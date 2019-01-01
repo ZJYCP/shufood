@@ -1,8 +1,0 @@
-{
-    "navigationBarTitleText": "吃货圈",
-    "navigationBarBackgroundColor": "#fcf185",
-    "navigationBarTextStyle": "black",
-    "usingComponents": {
-      "ec-canvas": "../../utils/ec-canvas/ec-canvas"
-    }
-  }
